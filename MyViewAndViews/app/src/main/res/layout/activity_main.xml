@@ -11,34 +11,34 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-            <FrameLayout
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/pixel_google"
+                android:contentDescription="TODO" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/pixel_google"
-                    android:contentDescription="@string/phone_pict" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/white"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#4D000000"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="@string/dummy_photos"
+                app:drawableStart="@drawable/ic_collections_white_18dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@android:color/white"
-                    android:layout_gravity="bottom"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="#4D000000"
-                    android:drawablePadding="4dp"
-                    android:gravity="center_vertical"
-                    android:padding="8dp"
-                    android:text="@string/dummy_photos"
-                    app:drawableStart="@drawable/ic_collections_white_18dp" />
-
-            </FrameLayout>
+        </FrameLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -127,7 +127,7 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:layout_height="wrap_content"

@@ -1316,7 +1316,8 @@
     data-issue-and-pr-hovercards-enabled
   >
         <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
-    <main id="js-repo-pjax-container" data-pjax-container >
+    <!--suppress RequiredAttributes -->
+            <main id="js-repo-pjax-container" data-pjax-container >
       
 
     
@@ -2327,7 +2328,8 @@
 </svg>
 </span></template>
 
-  <table class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="XML" data-tagsearch-path="MyViewAndViews/app/src/main/res/drawable/ic_launcher_background.xml">
+  <!--suppress RequiredAttributes -->
+    <table class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="XML" data-tagsearch-path="MyViewAndViews/app/src/main/res/drawable/ic_launcher_background.xml">
         <tr>
           <td id="L1" class="blob-num js-line-number js-code-nav-line-number" data-line-number="1"></td>
           <td id="LC1" class="blob-code blob-code-inner js-file-line">&lt;?<span class="pl-ent">xml</span><span class="pl-e"> version</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>1.0<span class="pl-pds">&quot;</span></span><span class="pl-e"> encoding</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>utf-8<span class="pl-pds">&quot;</span></span>?&gt;</td>
