@@ -1,4 +1,7 @@
 package com.anifyuli.myrecyclerview
 
-class Hero {
-}
+data class Hero(
+    var name: String = ",",
+    var detail: String = ",",
+    var photo: Int = 0
+)
