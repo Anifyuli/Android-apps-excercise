@@ -10,4 +10,6 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="about_me">Tentang saya</string>
+    <string name="animal_brief">Ringkasan</string>
+    <string name="animal_name">Nama Hewan</string>
 </resources>
