@@ -10,6 +10,11 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class ListAnimalAdapter(private val listAnimal: ArrayList<Animal>) : RecyclerView.Adapter<ListAnimalAdapter.ListViewHolder>() {
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback= onItemClickCallback
+    }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
         val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_list_animal, viewGroup, false)
@@ -27,6 +32,8 @@ class ListAnimalAdapter(private val listAnimal: ArrayList<Animal>) : RecyclerVie
 
         holder.tvAnimalName.text = animal.name
         holder.tvAnimalBrief.text = animal.brief
+        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listAnimal[holder.absoluteAdapterPosition]) }
+
     }
 
     override fun getItemCount(): Int {
@@ -38,6 +45,10 @@ class ListAnimalAdapter(private val listAnimal: ArrayList<Animal>) : RecyclerVie
         var tvAnimalBrief: TextView = itemView.findViewById(R.id.animal_brief)
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_animal)
 
-        }
-
     }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Animal)
+    }
+
+}

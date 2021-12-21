@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -26,6 +27,12 @@ class MainActivity : AppCompatActivity() {
         rvAnimal.layoutManager = LinearLayoutManager(this)
         val listAnimalAdapter = ListAnimalAdapter(list)
         rvAnimal.adapter = listAnimalAdapter
+
+        listAnimalAdapter.setOnItemClickCallback(object : ListAnimalAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: Animal) {
+                showSelectedAnimal(data)
+            }
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -41,6 +48,23 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun showSelectedAnimal(animal: Animal) {
+//        Toast.makeText(this, animal.name + " dipilih", Toast.LENGTH_LONG).show()
+        val intent = Intent(this@MainActivity, DetailActivity::class.java)
+        intent.putExtra(DetailActivity.name, animal.name)
+        intent.putExtra(DetailActivity.bio_name, animal.bio_name)
+        intent.putExtra(DetailActivity.kingdom, animal.kingdom)
+        intent.putExtra(DetailActivity.filum, animal.filum)
+        intent.putExtra(DetailActivity.kelas, animal.kelas)
+        intent.putExtra(DetailActivity.ordo, animal.ordo)
+        intent.putExtra(DetailActivity.family, animal.family)
+        intent.putExtra(DetailActivity.genus, animal.genus)
+        intent.putExtra(DetailActivity.detail, animal.detail)
+        intent.putExtra(DetailActivity.photo, animal.photo)
+        startActivity(intent)
+
     }
 }
 
