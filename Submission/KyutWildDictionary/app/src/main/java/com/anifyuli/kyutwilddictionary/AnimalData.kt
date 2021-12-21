@@ -134,6 +134,19 @@ object AnimalData {
         "Struthionidae"
     )
 
+    private val genus = arrayOf(
+        "Haliaeetus",
+        "Casuarius",
+        "Giraffa",
+        "Hippopotamus",
+        "Rhinoceros",
+        "Phascolarctos",
+        "Panthera",
+        "Canis",
+        "Panthera",
+        "Struthio"
+    )
+
     private val photo = intArrayOf(
         R.drawable.bald_eagle,
         R.drawable.cassowary,
@@ -161,6 +174,7 @@ object AnimalData {
                 animal.ordo = ordo[position]
                 animal.kelas = kelas[position]
                 animal.family = family[position]
+                animal.genus = genus[position]
                 animal.photo = photo[position]
                 list.add(animal)
             }

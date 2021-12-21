@@ -10,9 +10,11 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class ListAnimalAdapter(private val listAnimal: ArrayList<Animal>) : RecyclerView.Adapter<ListAnimalAdapter.ListViewHolder>() {
+
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.activity_main, viewGroup, false)
+        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_list_animal, viewGroup, false)
         return ListViewHolder(view)
+
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
@@ -32,8 +34,10 @@ class ListAnimalAdapter(private val listAnimal: ArrayList<Animal>) : RecyclerVie
     }
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvAnimalName : TextView = itemView.findViewById(R.id.animal_name)
-        var tvAnimalBrief : TextView = itemView.findViewById(R.id.animal_brief)
-        var imgPhoto : ImageView = itemView.findViewById(R.id.img_animal)
+        var tvAnimalName: TextView = itemView.findViewById(R.id.animal_name)
+        var tvAnimalBrief: TextView = itemView.findViewById(R.id.animal_brief)
+        var imgPhoto: ImageView = itemView.findViewById(R.id.img_animal)
+
+        }
+
     }
-}

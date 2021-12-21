@@ -10,6 +10,7 @@ data class Animal (
     var kelas: String = "",
     var ordo: String = "",
     var family: String = "",
+    var genus:String = "",
     var photo: Int = 0
 
 )

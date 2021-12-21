@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         rvAnimal.layoutManager = LinearLayoutManager(this)
         val listAnimalAdapter = ListAnimalAdapter(list)
         rvAnimal.adapter = listAnimalAdapter
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
